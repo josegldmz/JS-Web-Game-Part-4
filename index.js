@@ -6,7 +6,7 @@ let direction = null;
 let x = 100;
 let y = 250;
 
-function moveCharacter() {
+setInterval(function(){
     if(direction === 'west') {
         x = x - 1
     }
@@ -24,9 +24,30 @@ function moveCharacter() {
     }
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'
-}
+}, 1)
 
-setInterval(moveCharacter, 1)
+document.addEventListener('keydown', function(e){
+    if(e.repeat) return;
+
+    if(e.key === 'ArrowLeft'){
+        direction = 'west'
+    }
+    if(e.key === 'ArrowUp') {
+        direction = 'north'
+    }
+    if(e.key === 'ArrowRight') {
+        direction = 'east'
+    }
+    if(e.key === 'ArrowDown') {
+        direction = 'south'
+    }
+})
+
+document.addEventListener('keyup', funtion(e){
+    direction = null
+})
+
+// setInterval(moveCharacter, 1)
 
 move(character).to(100, 250)
 
