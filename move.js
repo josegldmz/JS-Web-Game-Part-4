@@ -29,10 +29,10 @@ function move(element) {
             }
             element.style.left = x + 'px'
             element.style.bottom = y + 'px'
-        }
+        } 
+   
 
-        
-    }
+    // }
 
     setInterval(moveCharacter, 1)
 
@@ -63,4 +63,5 @@ function move(element) {
         to: moveToCoordinates,
         withArrowKeys: moveWithArrowKeys
     }
+}
 }

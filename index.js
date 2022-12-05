@@ -22,56 +22,56 @@ function handleDirectionChange(direction){
 }
 
     move(character).withArrowKeys(100, 250, handleDirectionChange)
-// move(newImage('assets/tree.png')).withArrowKeys(200, 450)
+// // move(newImage('assets/tree.png')).withArrowKeys(200, 450)
 
-// let direction = null;
-// let x = 100;
-// let y = 250;
+// // let direction = null;
+// // let x = 100;
+// // let y = 250;
 
-setInterval(function(){
-    if(direction === 'west') {
-        x = x - 1
-    }
+// setInterval(function(){
+//     if(direction === 'west') {
+//         x = x - 1
+//     }
 
-    if(direction === 'north') {
-        y = y + 1
-    }
+//     if(direction === 'north') {
+//         y = y + 1
+//     }
 
-    if(direction === 'east') {
-        x = x + 1
-    }
+//     if(direction === 'east') {
+//         x = x + 1
+//     }
 
-    if(direction === 'south') {
-        y = y - 1
-    }
-    character.style.left = x + 'px'
-    character.style.bottom = y + 'px'
-}, 1)
+//     if(direction === 'south') {
+//         y = y - 1
+//     }
+//     character.style.left = x + 'px'
+//     character.style.bottom = y + 'px'
+// }, 1)
 
-document.addEventListener('keydown', function(e){
-    if(e.repeat) return;
+// document.addEventListener('keydown', function(e){
+//     if(e.repeat) return;
 
-    if(e.key === 'ArrowLeft'){
-        direction = 'west'
-    }
-    if(e.key === 'ArrowUp') {
-        direction = 'north'
-    }
-    if(e.key === 'ArrowRight') {
-        direction = 'east'
-    }
-    if(e.key === 'ArrowDown') {
-        direction = 'south'
-    }
-})
+//     if(e.key === 'ArrowLeft'){
+//         direction = 'west'
+//     }
+//     if(e.key === 'ArrowUp') {
+//         direction = 'north'
+//     }
+//     if(e.key === 'ArrowRight') {
+//         direction = 'east'
+//     }
+//     if(e.key === 'ArrowDown') {
+//         direction = 'south'
+//     }
+// })
 
-document.addEventListener('keyUp', function(e){
-    direction = null
-})
+// document.addEventListener('keyUp', function(e){
+//     direction = null
+// })
 
-// setInterval(moveCharacter, 1)
+// // setInterval(moveCharacter, 1)
 
-move(character).to(100, 250)
+// move(character).to(100, 250)
 
 
 move(newImage('assets/tree.png')).to(200, 450)
